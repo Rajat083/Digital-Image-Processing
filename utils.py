@@ -11,11 +11,7 @@ def compute_histogram(img):
 
 
 def histogram_equalization(img):
-    rows, cols = img.shape
-    hist = compute_histogram(img) * (rows*cols)
-    total_pixels = img.shape[0]*img.shape[1]
-    pdf = hist / total_pixels
-
+    pdf = compute_histogram(img)
     cdf = np.zeros(256)
     cdf[0] = pdf[0]
 
