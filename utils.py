@@ -44,8 +44,8 @@ def apply_filter(image, kernel):
             
     return res_img
 
-def print_image(image):
+def print_image(image, note=''):
     plt.imshow(image, cmap='gray')
-    plt.title(f'Image Shape: {image.shape}')
+    plt.title(f'Image {note} : {image.shape}')
     plt.axis('off')
     plt.show()
